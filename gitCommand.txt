@@ -22,3 +22,13 @@ git push -u origin master 推送到git仓库 -u的是以数据流的方式
 再次提交可以直接用git push
 
 git diff fileName 查看某个文件具体修改了什么内容
+git log --pretty=oneline 查看提交（commit）历史
+git reset --hard HEAD^ 在Git中，用HEAD表示当前版本，上一个版本就是HEAD^，
+上上一个版本就是HEAD^^，以此类推，如果需要回退几十个版本，
+写几十个^容易数不过来，所以可以写，例如回退30个版本为：HEAD~30。
+
+git checkout -- <file> 适用于工作区修改没有add的文件
+
+git push -f origin master 将回退后的版本强制推送到远程仓库。(使用git push命令会推送失败）
+提示! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'git@github.com:yuanyuchao/retest.git'
