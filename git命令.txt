@@ -1,0 +1,24 @@
+ls -al ~/.ssh 检查ssh公钥是否存在
+ssh-keygen -t rsa -C "499908562@qq.com" 生成ssh  路径：用户/.ssh目录下
+去github上添加这个公钥 记事本打开pub后缀的文件
+ ssh -T git@github.com 连接github账户  yes然后会提示绑定成功
+
+
+git config -l查看全局配置 检查是否建立连接
+
+
+git init 初始化仓库
+git add . 添加所有文件
+git status  查看工作区状态 增加修改删除 都会有提示
+git commit -m '本次提交的说明'  提交修改
+
+git remote add origin git@github.com:yuanyuchao/retest.git 本地与git上新建的仓库建立连接
+origin 是一个变量 代表仓库的地址 可以自定义
+以下操作origin代表的就是仓库的地址
+
+git pull 把仓库的代码拉下来到本地
+
+git push -u origin master 推送到git仓库 -u的是以数据流的方式
+再次提交可以直接用git push
+
+git diff fileName 查看某个文件具体修改了什么内容
