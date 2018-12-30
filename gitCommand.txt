@@ -29,6 +29,15 @@ git reset --hard HEAD^ 在Git中，用HEAD表示当前版本，上一个版本就是HEAD^，
 
 git checkout -- <file> 适用于工作区修改没有add的文件
 
-git push -f origin master 将回退后的版本强制推送到远程仓库。(使用git push命令会推送失败）
+git push -f origin master 将回退后的版本强制推送到远程仓库。本地强制上传到远程，把远程的覆盖(使用git push命令会推送失败）
 提示! [rejected]        master -> master (non-fast-forward)
 error: failed to push some refs to 'git@github.com:yuanyuchao/retest.git'
+
+
+在使用git commit命令将修改从暂存区提交到本地版本库后，
+只剩下最后一步将本地版本库的分支推送到远程服务器上对应的分支了，
+如果不清楚版本库的构成，可以查看我的另一篇，git 仓库的基本结构。
+git push的一般形式为 git push <远程主机名> <本地分支名>  <远程分支名> ，
+例如 git push origin master：refs/for/master ，
+即是将本地的master分支推送到远程主机origin上的对应master分支， origin 是远程主机名，
+第一个master是本地分支名，第二个master是远程分支名。
