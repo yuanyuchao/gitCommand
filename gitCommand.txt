@@ -12,6 +12,11 @@ git add . 添加所有文件
 git status  查看工作区状态 增加修改删除 都会有提示
 git commit -m '本次提交的说明'  提交修改
 
+git branch 查看当前分支
+git branch -a 查看分支列表
+git checkout 分支名字 切换到某分支
+git checkout -b 分支名字 创建一个分支并切换到新创建的分支
+
 git remote add origin git@github.com:yuanyuchao/retest.git 本地与git上新建的仓库建立连接
 origin 是一个变量 代表仓库的地址 可以自定义
 以下操作origin代表的就是仓库的地址
